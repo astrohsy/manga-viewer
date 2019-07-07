@@ -50,15 +50,13 @@ $(window).on('load', () => {
 
 $(document).keydown((e) => {
     if (e.keyCode == '37') {
-        index = index - 2;
-        index = Math.max(0, index);
+        index = Math.max(index - 2, 0);
     }
     else if (e.keyCode == '39') {
-        index = index + 2;
+        index = Math.min(index + 2, context.length-1);
     }
 
     const loc = baseLocation + '/' + chapters[chapter];
-
     const pic = 'file://' + __dirname + '/../' + loc + '/' + context[index+1]
     const pic2 = 'file://' + __dirname + '/../' + loc + '/' + context[index]
     $('.left-container').empty().append(`<img src=${pic} />`)
