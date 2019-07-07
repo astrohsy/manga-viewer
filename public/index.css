@@ -1,0 +1,66 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%; 
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+
+.container > .panel-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    height: 100%;
+    width: 20%;
+    overflow: scroll;
+}
+
+.container > .panel-container > .items {
+    font-size: 20px;
+    margin-top: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 100%;
+    background-color: #efefef;
+    
+}
+
+.container > .panel-container > .items:hover {
+    background-color: blue;
+    
+}
+
+.container > .panel-container > .items.active {
+    background-color: red;
+    
+}
+
+
+.container > .left-container {
+    float: left;
+    margin-left: 20%;
+    background-color: white;
+    height: 100%;
+    width: 39%;
+}
+
+.container > .right-container {
+    display: inline-block;
+    margin-left: 20px;
+    background-color: white;
+    height: 100%;
+    width: 39%;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}

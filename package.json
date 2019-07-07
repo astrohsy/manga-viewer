@@ -1,0 +1,35 @@
+{
+  "name": "manga-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "build"
+  },
+  "homepage": "http://astrohsy.com",
+  "author": {
+    "name": "Hoseung Lee",
+    "email": "astrohsy@gmail.com"
+  },
+  "license": "ISC",
+  "build": {
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron": "^5.0.5",
+    "electron-builder": "^20.44.4"
+  },
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}
