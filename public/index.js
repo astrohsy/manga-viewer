@@ -18,6 +18,7 @@ const chapters = dirs(baseLocation).sort((x,y) => {
 })
 
 const contexts = []
+console.log(chapters)
 for (let i of chapters) {
     const loc = baseLocation + '/' + i;
     const tmp = fs.readdirSync(loc);
@@ -36,16 +37,16 @@ $(window).on('load', () => {
         const loc = baseLocation + '/' + chapters[chapter]
         const pic = 'file://' + __dirname + '/../' + loc + '/' + context[index+1]
         const pic2 = 'file://' + __dirname + '/../' + loc + '/' + context[index]
-        $('.left-container').empty().append(`<img src=${pic} />`)
-        $('.right-container').empty().append(`<img src=${pic2} />`)
+        $('.left-container').empty().append(`<img src=${pic} />`).append(`<div class="foot">${index+1}/${context.length}</div>`)
+        $('.right-container').empty().append(`<img src=${pic2} />`).append(`<div class="foot">${index+2}/${context.length}</div>`)
     
     }) }))
     const loc = baseLocation + '/' + chapters[chapter];
     const t = fs.readdirSync(loc);
     const pic = 'file://' + __dirname + '/../' + loc + '/' + t[1]
     const pic2 = 'file://' + __dirname + '/../' + loc + '/' + t[0]
-    $('.left-container').append(`<img src=${pic} />`)
-    $('.right-container').append(`<img src=${pic2} />`)
+    $('.left-container').append(`<img src=${pic} />`).append(`<div class="foot">${index+1}/${context.length}</div>`)
+    $('.right-container').append(`<img src=${pic2} />`).append(`<div class="foot">${index+2}/${context.length}</div>`)
 })
 
 $(document).keydown((e) => {
@@ -59,7 +60,7 @@ $(document).keydown((e) => {
     const loc = baseLocation + '/' + chapters[chapter];
     const pic = 'file://' + __dirname + '/../' + loc + '/' + context[index+1]
     const pic2 = 'file://' + __dirname + '/../' + loc + '/' + context[index]
-    $('.left-container').empty().append(`<img src=${pic} />`)
-    $('.right-container').empty().append(`<img src=${pic2} />`)
+    $('.left-container').empty().append(`<img src=${pic} />`).append(`<div class="foot">${index+1}/${context.length}</div>`)
+    $('.right-container').empty().append(`<img src=${pic2} />`).append(`<div class="foot">${index+2}/${context.length}</div>`)
 
 });

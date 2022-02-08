@@ -39,7 +39,7 @@ body {
 }
 
 .container > .panel-container > .items.active {
-    background-color: red;
+    background-color: #3A3B3C;
     
 }
 
@@ -50,6 +50,12 @@ body {
     background-color: white;
     height: 100%;
     width: 39%;
+}
+
+.container > * > .foot {
+    margin-top: 10pt;
+    font-weight: bold;
+    text-align: center;
 }
 
 .container > .right-container {
